@@ -1,0 +1,130 @@
+<!DOCTYPE hml>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="design.css"/>
+<title>Compensação</title>
+</head>
+<body onload="escolha()">
+<h1>Leitura de Faturas(Energia Reativa)</h1>
+
+
+<!-- Energia Reativa dependente do operador da rede de distribuição 
+("EDP Distribuição"), logo, independente do comercializador
+E do tipo de Contrato!!-->
+
+<div id="container1">
+
+<div id="contr">
+    <form class="inter">
+    <h3> Tipo de Contrato: </h3>
+    <select id="t.c">
+    <option value="0">B.T.E.</option>
+    <option value="1">M.T.</option>
+    <option value="2">A.T.</option>
+    <option value="3">M.A.T.</option>
+    </select>
+    </form>
+</div>
+
+<div id="fatu">
+    <form class="inter">
+    <h3> Tipo de Fatura:</h3>
+    <select id="t.f">
+    <option value="0">Semestral(3 meses)</option>
+    <option value="1">Mensal(1 mês)</option>
+    <option value="2">Bi-Mensal(2 meses)</option>
+    </select>
+    </form>
+</div>
+</div>
+
+
+<div id="container2">
+
+<div id="valores">
+    <h3> Dados da Fatura </h3>
+    <table id="valores-tab">
+    <tr>
+    <td>
+    <span id="puxar">Energia Ativa F.V.(kWh):&nbsp;</span><input type="text" class="esquerda" id="en_a_fv"/>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <span id="puxar1">Energia Ativa H.V.(kWh):&nbsp;</span><input type="text" class="esquerda" id="en_a_hv"/>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <span id="puxar2">Custo de energia reativa F.V. (Escalão 1)(€):&nbsp;</span><input type="text" class="esquerda" id="en_r_p1"/>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <span id="puxar2">Custo de energia reativa F.V. (Escalão 2)(€):&nbsp;</span><input type="text" class="esquerda" id="en_r_p2"/>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <span id="puxar2">Custo de energia reativa F.V. (Escalão 3)(€):&nbsp;</span><input type="text" class="esquerda" id="en_r_p3"/>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <span id="puxar3">Custo de energia reativa H.V.(€):&nbsp;</span><input type="text" class="esquerda" id="c_erc"/> 
+    </td>
+    </tr>
+    </table>
+</div>
+</div>
+
+<div id="container3">
+    <div id="botao">
+        <input type="button" id="calc" value="Calcular" onclick="calcular()">
+    </div>
+</div>
+
+<div id="container4">
+    <div id="valores-reativa">
+            <table id="valores-tab1">
+                <tr>
+                <td>
+                <span id="puxar9">Fator de Potência em F.V.:&nbsp;</span><input type="text" class="el_valores" id="cos_fi_fv" disabled/>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                <span id="puxar10">Fator de Potência em H.V.:&nbsp;</span><input type="text" class="el_valores" id="cos_fi_hv" disabled/>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                <span id="puxar11">Energia Reativa F.V. Total(kVArh):&nbsp;</span><input type="text" class="el_valores" id="en_ri_t" disabled/>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                <span id="puxar12">Energia Reativa H.V. Total(kVArh):&nbsp;</span><input type="text" class="el_valores" id="en_rc_t" disabled/>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                <span id="puxar16">Custo Total Energia Reativa(€):&nbsp;</span><input type="text" class="el_valores" id="c_er" maxlength="10" disabled/>
+                </td>
+                </tr>
+            </table>
+    </div>
+    </div>
+
+        <input type="button" id="botao_rolldown" onclick="rolldown()" value="Detalhes"/>
+        <div id="rolldown" hidden>
+        <span id="cavalo">Os valores apresentados são valores médios.</u></span><br>
+        <span id="cavalo">Antes de executar o cálculo insira todos os dados necessários.</span><br>
+        <span id="cavalo">No cálculo de energia reativa foi considerado o funcionamento idêntico de toda a instalação, em todo o período correspondente à fatura.</span><br>
+        <span id="cavalo">Deverá utilizar "." e não "," para representar números decimais.</span>
+        </div>
+
+<script src="logic.js"></script>
+</body>
+</html>

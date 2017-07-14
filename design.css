@@ -1,0 +1,209 @@
+@viewport{
+zoom:1.0;
+width: extend-to-zoom;
+}
+@-ms-viewport{
+width: extend-to-zoom;
+zoom:1.0;
+}
+
+
+body{
+width:100%;
+padding:0;
+margin:0;
+font-family: Calibri;
+text-align: center;
+text-align-last: center;
+background-color: #6AB187;
+}
+
+h1{
+margin: 0.5% 1% 1% 1%;
+text-align: center;
+color: darkcyan;
+text-shadow: 0.5px 0.5px gray;
+box-shadow: 1px 1px lightgray;
+background-color: whitesmoke;
+border-radius:5%;
+}
+
+
+.inter{
+text-align: center;
+margin:auto;
+margin-bottom:2%;
+}
+
+
+#container1{
+display:flex;
+justify-content: center;
+}
+#container2{
+display:flex;
+justify-content: center;
+}
+#container3{
+display:flex;
+justify-content: center;
+}
+#container4{
+display:flex;
+justify-content: space-around;
+margin-top:2%;
+}
+
+
+#contr{
+border:2px solid black;
+width:15%;
+min-width: 115px;
+background-color: #FFFFFF;
+}
+
+
+#fatu{
+margin-left:5%;
+border:2px solid black;
+width:15%;
+min-width: 145px;
+background-color: #FFFFFF;
+}
+
+#t.f{
+font-family: Calibri;
+height:20%;
+min-height:30px;
+}
+
+
+#t.c{
+font-family: Calibri;
+height:20%;
+min-height:30px;
+}
+
+#valores{
+background-color: #FFFFFF;
+border:2px solid black;
+margin-top:2%;
+width:40%;
+text-align: center;
+min-width: 500px;
+}
+
+#valores-tab{
+margin:auto;
+margin-left:2%;
+min-width: 500px;
+}
+
+#puxar{
+margin-left:30.5%;
+}
+
+#puxar1{
+margin-left:29.65%;
+}
+#puxar2{
+margin-left:5.45%;
+}
+
+#puxar3{
+margin-left:19.4%;
+}
+
+#botao{
+margin:auto;
+margin-top:1.5%;
+width:12.5%;
+min-width:65px;
+height:4%;
+min-height: 20px;
+}
+
+#calc{
+width:100%;
+height:100%;
+cursor:pointer;
+color:black;
+font-weight:bold;
+background-color: #B7B8B6;
+border:1px solid darkgrey;
+}
+
+#calc:hover{
+background-color: #34675C;
+color:white;
+border:1px solid #B3C100;
+}
+
+#puxar9{
+margin-left:0.2%;
+}
+
+#puxar10{
+margin-left:-0.9%;
+}
+
+#puxar11{
+margin-left:-10.2%;
+}
+
+#puxar12{
+margin-left:-11.1%;
+}
+
+#puxar13{
+margin-left:6.7%;
+}
+
+#puxar14{
+margin-left:6.7%;
+}
+
+#puxar15{
+margin-left:13.6%;
+}
+#puxar16{
+margin-left:-7.05%;
+}
+
+
+.esquerda{
+text-align: left;
+text-align-last: left;
+}
+
+#valores-reativa{
+border:2px solid black;
+background-color: #FFFFFF;
+width:35%;
+min-width: 450px;
+}
+
+#valores-tab1{
+min-width: 450px;
+margin: auto;
+}
+
+#botao_rolldown{
+margin-top:1%;
+border:2px solid darkolivegreen;
+color:white;
+background-color: darkkhaki;
+cursor:pointer;
+font-weight: bold;
+}
+
+#botao_rolldown:hover{
+background-color: darkolivegreen;
+border:2px solid darkkhaki;
+}
+
+.el_valores{
+background-color: black;
+color:white;
+font-weight:bold;
+}
