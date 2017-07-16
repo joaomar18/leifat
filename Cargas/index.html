@@ -1,0 +1,111 @@
+<!DOCTYPE hml>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="design.css"/>
+<title>Compensação</title>
+<script src="logic.js"></script>
+</head>
+<body>
+<div>
+<img src="back.png" id="imag" onclick="javascript:history.back()"/>
+
+<h1>Cargas</h1>
+</div>
+<div id="LOL1">
+    <h3 class="titles">Cargas Monofásicas Existentes</h3>
+
+    <input type="text" id="member"><br />
+    <a href="#" onclick="addFields()">Refresh</a>
+    <div id="container"/>
+
+</div> 
+</div>
+
+<div id="LOL2">
+    <h3 class="titles">Cargas Trifásicas Existentes</h3>
+
+    <input type="text1" id="member1"><br />
+    <a href="#" onclick="addFields1()">Refresh</a>
+    <div id="container1"/>
+
+</div>
+</div>
+
+<div id="LOL3">
+    <input type="button" id="calc" value="Calcular" onclick="calcular()">
+</div>
+
+<div id="LOL4">
+        <div id="valores-reativa">
+        <h3 class="titles"> Atual (Valores/Dia)</h3>
+            <table id="valores-tab1">
+                <tr>
+                <td>
+                <span id="puxar9">Fator de Potência em F.V.:&nbsp;</span><input type="text" class="el_valores" id="cos_fi_fv" maxlength="10" disabled/>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                <span id="puxar11">Energia Reativa F.V. Total(kVArh):&nbsp;</span><input type="text" class="el_valores" id="en_ri_t" maxlength="10" disabled/>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                <span id="puxar13">Energia Reativa no Escalão 1(kVArh):&nbsp;</span><input type="text" class="el_valores" id="en_re1" maxlength="10" disabled/>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                <span id="puxar14">Energia Reativa no Escalão 2(kVArh):&nbsp;</span><input type="text" class="el_valores" id="en_re2" maxlength="10" disabled/>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                <span id="puxar15">Energia Reativa no Escalão 3(kVArh):&nbsp;</span><input type="text" class="el_valores" id="en_re3" maxlength="10" disabled/>
+                </td>
+                </tr>
+            </table>
+    </div>
+</div>
+
+<div id="LOL5">
+    <h3 id="titles">Custos de Escalões por kVArh</h3>
+    <div id="custos">
+        <table id="valores-tab1">
+                <tr>
+                <td>
+                <span id="puxar16">Custo em Escalão 1(‎€):&nbsp;</span><input type="text" class="el_valores" id="c_e1" maxlength="10">
+                </td>
+                </tr>
+                <tr>
+                <td>
+                <span id="puxar17">Custo em Escalão 2(‎€):&nbsp;</span><input type="text" class="el_valores" id="c_e2" maxlength="10">
+                </td>
+                </tr>
+                <tr>
+                <td>
+                <span id="puxar18">Custo em Escalão 3(‎€):&nbsp;</span><input type="text" class="el_valores" id="c_e3" maxlength="10">
+                </td>
+                </tr>
+        </table>
+    </div>
+</div>
+
+<div id="LOL6">
+    <h3 id="titles">Custo de Energia Reativa/Dia</h3>
+    <input type="text" id="custo_t" disabled>
+</div>
+
+        <input type="button" id="botao_rolldown" onclick="rolldown()" value="Detalhes"/>
+        <div id="rolldown" hidden>
+        <span id="cavalo">A aplicação não é destinada para cargas predominantemente capacitivas, que fornecem energia reativa à rede.</u></span><br>
+        <span id="cavalo"><u>Apenas é calculado o custo da energia reativa em horas de pontas e cheias, visto que em horas de vazio, é a energia capacitiva "que é" (pode ser) cobrada.</u></span><br>
+        <span id="cavalo">Antes de executar o cálculo insira todos os dados necessários.</span><br>
+        <span id="cavalo">Deverá utilizar "." e não "," para representar números decimais.</span>
+        </div>
+
+
+
+</body>
+</html>
